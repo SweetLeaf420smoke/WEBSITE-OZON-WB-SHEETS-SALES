@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кейс: автоматизация данных Wildberries в Google Sheets</title>
+  <meta name="description" content="Кейс: система для WB в Google Sheets — загрузка продаж, заказов, остатков из API, план поставок по зонам, цены по расписанию, расчёт экономики и перераспределение по складам.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Кейс: автоматизация WB в Google Sheets">
+  <meta property="og:description" content="Система для селлеров WB: API, план поставок, экономика, перераспределение по складам. Реализовано в Google Sheets.">
+  <meta property="og:url" content="https://sweetleaf420smoke.github.io/WEBSITE-OZON-WB-SHEETS-SALES/case-wb-sheets.html">
+  <meta property="og:locale" content="ru_RU">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,6 +18,7 @@
       <a href="index.html" class="logo">Перераспределение WB</a>
       <nav class="header-nav">
         <a href="case-ozon-postavki.html">Кейс Ozon</a>
+        <a href="uslugi.html">Как работаем</a>
         <a href="index.html" class="btn btn-header">На главную</a>
       </nav>
     </div>
@@ -88,6 +95,18 @@
       <h2>Расчёт экономики продаж</h2>
       <p>Автоматический расчёт по каждой позиции: выручка, комиссия WB, СПП, логистика, закупка, упаковка, налоги, НДС входящий/исходящий/к уплате, <strong>прибыль</strong>, <strong>ROI</strong>. На основе уведомления о выкупе и детализированного отчёта WB.</p>
       <p>Лист <strong>ПРОГНОЗ</strong> — моделирование экономики при изменении цены, логистики, закупки, комиссии (по какой цене продавать, какая прибыль, какой ROI). В системе было более 120 позиций с автоматическим расчётом.</p>
+      <figure class="screenshot">
+        <img src="img/kejs-ekonomika-raschet.png" alt="Таблица WB Wildberries: расчёт экономики по позициям — прибыль, ROI, НДС, комиссия">
+        <figcaption>Пример листа расчёта экономики: по каждой позиции — выручка, комиссия, логистика, прибыль, ROI.</figcaption>
+      </figure>
+      <figure class="screenshot">
+        <img src="img/kejs-ekonomika-nds-k-uplate.png" alt="Таблица WB Wildberries: НДС к уплате — расчёт по позициям селлера">
+        <figcaption>НДС входящий, исходящий и к уплате по каждой позиции.</figcaption>
+      </figure>
+      <figure class="screenshot">
+        <img src="img/kejs-ekonomika-voznagrazhdenie-zatraty.png" alt="Таблица WB Wildberries: вознаграждение и затраты по позициям — комиссия, логистика">
+        <figcaption>Вознаграждение WB, затраты (закупка, упаковка, логистика) — в расчёте экономики.</figcaption>
+      </figure>
     </section>
 
     <section class="section" id="result">
@@ -103,16 +122,25 @@
       <p>Всё работает в Google Sheets, без сложного ПО. Система адаптируется под любой аккаунт WB и масштабируется с ростом бизнеса.</p>
     </section>
 
-    <section class="section section-alt" id="case-pereraspredelenie">
-      <h2>Кейс: запрос на таблицу перераспределения (Кворк)</h2>
-      <p>Клиентка с Кворка (Татьяна, коллега заказчицы Лизы) обратилась с запросом:</p>
+    <section class="section section-alt" id="case-shelest">
+      <h2>Кейс: WB-таблица (два заказа)</h2>
+      <p>С этого проекта по сути началась автоматизация WB в Google Sheets. Два заказа: сделана таблица с загрузкой продаж, заказов и остатков из API WB, зоны и регионы (WarehouseRegions), план поставок по зонам (Supply_Plan_By_ZONES), управление ценами по расписанию и расчёт экономики (прибыль, ROI, НДС, комиссия, СПП). Всё то, что описано выше в разделе «Что было реализовано», впервые собрано и работает в этой таблице.</p>
+    </section>
+
+    <section class="section" id="case-pereraspredelenie">
+      <h2>Кейс: таблица перераспределения по складам WB</h2>
+      <p>Запрос клиента:</p>
       <blockquote>
         «Можете ли вы сделать таблицу, которая берёт файлы: продажи по складам, остатки, откуда у нас не локальные заказы идут. И выдает куда и сколько нужно перераспределить.»
       </blockquote>
       <p>Это как раз задача, которую решает <a href="index.html">таблица «Перераспределение по складам WB»</a>: данные по продажам и остаткам подтягиваются из WB (Statistics API), нелокальные заказы и дефицит по ФО считаются в таблице, на выходе — куда и сколько везти по складам и артикулам. Для WB такая таблица делается без проблем.</p>
       <figure class="screenshot">
-        <img src="img/tatyana-pereraspredelenie.png" alt="Лист «Перераспределение» — ФО, склады, заказы, остатки, сколько перераспределить">
-        <figcaption>Пример таблицы для Татьяны (WB): лист «Перераспределение» — колонка ФО, данные по складам и рекомендации по догрузке.</figcaption>
+        <img src="img/tatyana-pereraspredelenie.png" alt="Таблица WB Wildberries: перераспределение по складам — ФО, заказы, остатки, рекомендации по догрузке">
+        <figcaption>Пример таблицы (WB): лист «Перераспределение» — колонка ФО, данные по складам и рекомендации по догрузке.</figcaption>
+      </figure>
+      <figure class="screenshot">
+        <img src="img/pereraspredelenie.png" alt="Таблица WB Wildberries: перераспределение по складам — свод по ФО и округам">
+        <figcaption>Ещё один вид листа перераспределения — свод по ФО и складам.</figcaption>
       </figure>
     </section>
 
@@ -122,7 +150,7 @@
   </main>
 
   <footer class="footer">
-    <p><a href="index.html">Главная</a> · Кейс: WB Sheets автоматизация · <a href="case-ozon-postavki.html">Кейс: Ozon поставки</a></p>
+    <p><a href="index.html">Главная</a> · <a href="case-ozon-postavki.html">Кейс Ozon</a> · <a href="uslugi.html">Как работаем</a></p>
     <p>Контакт — по кнопкам выше.</p>
   </footer>
 

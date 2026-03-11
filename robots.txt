@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sweetleaf420smoke.github.io/WEBSITE-OZON-WB-SHEETS-SALES/sitemap.xml
