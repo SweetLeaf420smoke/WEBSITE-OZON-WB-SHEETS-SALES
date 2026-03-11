@@ -47,4 +47,7 @@ blockquote { margin: 1rem 0; padding: 1rem 1.25rem; border-left: 4px solid #e85d
 .reviews-list li { margin-bottom: 1.5rem; }
 .reviews-list blockquote { margin: 0.5rem 0 0.25rem; }
 .review-meta { font-size: 0.9rem; color: #666; margin: 0; }
+.review-badge { display: none; font-size: 0.8rem; color: #c2410c; font-weight: 600; margin-bottom: 0.35rem; }
+.review--power-buyer .review-badge { display: inline-block; }
+.review--power-buyer .review-badge::before { content: ''; display: inline-block; width: 1em; height: 1em; margin-right: 0.35em; vertical-align: -0.2em; background: url('https://cdn-edge.kwork.ru/images/badge/redesign/17s.png') no-repeat center/contain; }
 @media (max-width: 600px) { .hero h1 { font-size: 1.5rem; } .btn-outline { margin-left: 0; margin-top: 0.5rem; } .section-alt { margin: 0 -1rem; padding: 2rem 1rem; } }
