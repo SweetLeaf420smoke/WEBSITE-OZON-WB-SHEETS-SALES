@@ -12,6 +12,10 @@ main { max-width: 880px; margin: 0 auto; padding: 0 2rem 4rem; }
 .section h2 { font-size: 1.4rem; margin: 0 0 1rem; color: #e85d04; font-weight: 700; }
 .section ul, .section ol { margin: 0 0 1rem; padding-left: 1.35rem; }
 .section li { margin-bottom: 0.6rem; }
+.section-sub { margin: 1rem 0 0.5rem; font-size: 0.95rem; color: #555; }
+.screenshot { margin: 1rem 0; }
+.screenshot img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #eee; display: block; }
+.screenshot figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: #666; }
 .section-alt { background: linear-gradient(180deg, #fff8f3 0%, #fff 100%); margin: 0 -2rem; padding: 2.5rem 2rem; border-radius: 0; }
 .benefits-list { list-style: none; padding-left: 0; display: grid; gap: 1rem; }
 .benefits-list li { padding: 1.25rem; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(232,93,4,.08); border-left: 4px solid #e85d04; }
