@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Перераспределение по складам WB: заказы, остатки по ФО и план догрузки</title>
+  <meta name="description" content="Как таблица для WB показывает перераспределение по складам: заказы и остатки по ФО, сколько догрузить по артикулам. Листы «Перераспределение» и «Перераспределение по артикулам».">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Перераспределение по складам WB: заказы, остатки по ФО, план догрузки">
+  <meta property="og:description" content="Таблица для WB — перераспределение по складам: заказы по ФО, остатки, рекомендации по догрузке по артикулам.">
+  <meta property="og:url" content="https://sweetleaf420smoke.github.io/WEBSITE-OZON-WB-SHEETS-SALES/article-1-pereraspredelenie-wb.html">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=107283764","ym");ym(107283764,"init",{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});ym(8324542560765500273,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/107283764" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/8324542560765500273" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Таблицы WB и Ozon</a>
+      <nav class="header-nav">
+        <a href="case-wb-sheets.html">Кейс WB</a>
+        <a href="case-ozon-postavki.html">Кейс Ozon</a>
+        <a href="uslugi.html">Как работаем</a>
+        <a href="index.html#reviews">Отзывы</a>
+        <a href="index.html#cta" class="btn btn-header">Получить таблицу</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Перераспределение по складам WB: заказы, остатки по ФО и план догрузки</h1>
+      <p class="hero-sub">Как таблица для Wildberries показывает, куда везти товар: заказы и остатки по федеральным округам, сколько перераспределить по артикулам.</p>
+    </section>
+
+    <section class="section" id="problem">
+      <h2>В чём проблема</h2>
+      <p>В ЛК WB нет связки «заказы по складам — остатки по складам — сколько не хватает по ФО». Непонятно, куда везти товар и в каком объёме. Нелокальные заказы дороже и дольше. Нужна таблица с выгрузкой из WB: заказы и остатки по ФО и рекомендации по догрузке.</p>
+    </section>
+
+    <section class="section section-alt" id="solution">
+      <h2>Что даёт таблица</h2>
+      <p>Подключение к API Wildberries — выгрузка заказов, остатков и продаж в Google Таблицу. Два рабочих листа:</p>
+      <ul>
+        <li><strong>Перераспределение</strong> — свод по ФО: склады в округе, заказы и остатки по округу, сколько перераспределить, на отгрузку (дефицит + запас на 7 дней).</li>
+        <li><strong>Перераспределение по артикулам</strong> — по каждому ФО и артикулу (и размеру): заказы в ФО, продажи, остаток в ФО, сколько перераспределить, на отгрузку. Только позиции с дефицитом.</li>
+      </ul>
+      <p>Итог: цифры «куда и сколько везти» по округам и артикулам для решений по догрузкам.</p>
+    </section>
+
+    <section class="section" id="screenshots">
+      <h2>Как выглядит в таблице</h2>
+      <p class="section-sub">Листы из таблицы WB (заказы и склады по ФО):</p>
+      <figure class="screenshot">
+        <img src="img/pereraspredelenie-table.png" alt="Лист Перераспределение — свод по ФО, склады, заказы, остатки, сколько перераспределить">
+        <figcaption>Лист «Перераспределение»: ФО, склады в ФО, заказы и остатки по округу, сколько перераспределить, на отгрузку.</figcaption>
+      </figure>
+      <figure class="screenshot">
+        <img src="img/pereraspredelenie-fo-ostatki.png" alt="Лист Перераспределение по артикулам — артикул, размер, nmId, заказы и остаток в ФО, догрузка">
+        <figcaption>Лист «Перераспределение по артикулам»: по ФО и артикулу (размер, nmId) — заказы в ФО, продажи, остаток, сколько перераспределить, на отгрузку.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section section-alt" id="benefits">
+      <h2>Выгоды</h2>
+      <ul>
+        <li><strong>Экономия времени</strong> — выгрузка по кнопке «Обновить всё», не нужно вручную сводить заказы и остатки по складам WB.</li>
+        <li><strong>Прозрачность по ФО</strong> — видно, в каких округах дефицит и где много нелокальных заказов.</li>
+        <li><strong>План догрузки</strong> — готовые цифры по артикулам и размерам для решений по поставкам.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="how">
+      <h2>Как пользоваться</h2>
+      <ol>
+        <li>Подставить свой токен WB Statistics в таблицу.</li>
+        <li>Нажать «Обновить всё» (рекомендуется раз в день или перед планированием догрузок).</li>
+        <li>Смотреть листы «Перераспределение» и «Перераспределение по артикулам» — дефицит и объёмы на отгрузку.</li>
+        <li>Использовать данные для решений: какие склады догружать и по каким артикулам.</li>
+      </ol>
+    </section>
+
+    <section class="section section-alt" id="offer">
+      <h2>Что получите</h2>
+      <p>Доступ к копии таблицы (шаблон под свой токен) и краткая инструкция. Опционально — короткое обучение, как читать отчёты и использовать цифры при планировании догрузок.</p>
+    </section>
+
+    <section class="section cta-section">
+      <p><a href="index.html" class="btn btn-hero">На главную</a> <a href="case-wb-sheets.html" class="btn btn-outline">Кейс WB</a> <a href="https://t.me/sickselector" class="btn btn-outline" target="_blank" rel="noopener">Написать в Telegram</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><a href="index.html">Главная</a> · <a href="case-wb-sheets.html">Кейс WB</a> · <a href="case-ozon-postavki.html">Кейс Ozon</a> · <a href="article-1-pereraspredelenie-wb.html">Перераспределение WB</a> · <a href="uslugi.html">Как работаем</a> · <a href="index.html#reviews">Отзывы</a></p>
+    <p>Контакт — по кнопкам выше.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
