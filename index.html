@@ -1,3 +1,8 @@
+---
+reviews_href: "#reviews"
+cta_href: "#cta"
+footer_contact: "Контакт — по кнопкам выше (Telegram и почта)."
+---
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -20,18 +25,7 @@
   <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-  <header class="header">
-    <div class="header-inner">
-      <span class="logo">Таблицы WB и Ozon</span>
-      <nav class="header-nav">
-        <a href="case-wb-sheets.html">Кейс WB</a>
-        <a href="case-ozon-postavki.html">Кейс Ozon</a>
-        <a href="uslugi.html">Как работаем</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#cta" class="btn btn-header">Получить таблицу</a>
-      </nav>
-    </div>
-  </header>
+  {% include header.html %}
 
   <main>
     <section class="hero">
@@ -152,11 +146,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p><a href="case-wb-sheets.html">Кейс WB</a> · <a href="case-ozon-postavki.html">Кейс Ozon</a> · <a href="article-1-pereraspredelenie-wb.html">Перераспределение WB</a> · <a href="economy-profit.html">Экономика/прибыль</a> · <a href="uslugi.html">Как работаем</a> · <a href="#reviews">Отзывы</a></p>
-    <p>Контакт — по кнопкам выше (Telegram и почта).</p>
-    <p>Выгрузка из API Wildberries (WB Statistics API). Таблица для маркетплейса: Google Таблица + Apps Script.</p>
-  </footer>
+  {% include footer.html %}
 
   <script src="js/main.js"></script>
 </body>

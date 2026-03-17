@@ -1,0 +1,7 @@
+title: "Таблицы WB и Ozon"
+markdown: kramdown
+timezone: Europe/Moscow
+
+# Чтобы текущие URL (.html) остались как есть.
+permalink: pretty
+
