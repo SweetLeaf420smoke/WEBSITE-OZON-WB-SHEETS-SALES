@@ -33,6 +33,7 @@ blockquote { margin: 1rem 0; padding: 1rem 1.25rem; border-left: 4px solid #e85d
 .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,.15); }
 .btn-header { color: #e85d04; border: 2px solid #e85d04; }
 .btn-header:hover { background: #e85d04; color: #fff; }
+.header-nav a.btn-header:hover { color: #fff; }
 .btn-hero { background: #e85d04; color: #fff; margin-top: 0.5rem; box-shadow: 0 4px 14px rgba(232,93,4,.35); }
 .btn-hero:hover { background: #d44d00; }
 .btn-outline { border: 2px solid #333; color: #1a1a1a; margin-left: 0.5rem; }
