@@ -17,7 +17,7 @@ main { max-width: 880px; margin: 0 auto; padding: 0 2rem 4rem; }
 .section li { margin-bottom: 0.6rem; }
 .section-sub { margin: 1rem 0 0.5rem; font-size: 0.95rem; color: #555; }
 .screenshot { margin: 1rem 0; }
-.screenshot img { max-width: min(100%, 480px); height: auto; border-radius: 8px; border: 1px solid #eee; display: block; cursor: pointer; }
+.screenshot img { max-width: min(100%, 480px); height: auto; border-radius: 8px; border: 1px solid #eee; display: block; cursor: pointer; margin: 0 auto; }
 .screenshot figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: #666; }
 
 /* Лайтбокс: клик по картинке — открыть с зумом */
