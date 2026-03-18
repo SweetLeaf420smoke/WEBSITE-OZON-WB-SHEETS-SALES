@@ -9,7 +9,7 @@ body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1
 .logo { font-weight: 700; font-size: 1.15rem; color: #e85d04; white-space: nowrap; }
 main { max-width: 880px; margin: 0 auto; padding: 0 2rem 4rem; }
 .hero { padding: 4rem 0; text-align: center; }
-.hero h1 { font-size: 2rem; margin: 0 0 1.25rem; line-height: 1.25; color: #1a1a1a; font-weight: 700; }
+.hero h1 { font-size: 2rem; margin: 0 auto 1.25rem; line-height: 1.25; color: #1a1a1a; font-weight: 700; max-width: 760px; text-wrap: balance; hyphens: none; word-break: normal; overflow-wrap: normal; }
 .hero-sub { font-size: 1.1rem; color: #555; max-width: 560px; margin: 0 auto 2rem; }
 .section { padding: 2.5rem 0; }
 .section h2 { font-size: 1.4rem; margin: 0 0 1rem; color: #e85d04; font-weight: 700; }
