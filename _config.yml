@@ -2,5 +2,8 @@ title: "Таблицы WB и Ozon"
 markdown: kramdown
 timezone: Europe/Moscow
 
+# Google Analytics 4: подставь свой Measurement ID (Admin → Data streams → Web → Measurement ID)
+ga4_measurement_id: "G-XXXXXXXXXX"
+
 # Оставляем текущие URL (с .html), без "pretty" permalink.
 
