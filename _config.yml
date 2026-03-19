@@ -3,7 +3,7 @@ markdown: kramdown
 timezone: Europe/Moscow
 
 # Google Analytics 4 (ресурс «WB Ozon сайт», поток Web)
-ga4_measurement_id: "G-B8SKQ9HHPZ"
+ga4_measurement_id: "G-N9D55G2VNV"
 
 # Оставляем текущие URL (с .html), без "pretty" permalink.
 
