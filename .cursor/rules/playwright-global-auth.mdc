@@ -1,0 +1,19 @@
+---
+description: Единый Playwright профиль/логины для всех проектов
+alwaysApply: true
+---
+
+# Единые логины: Playwright (общий профиль + общие storageState)
+
+Цель: чтобы **во всех проектах** сайты открывались **без повторных логинов**.
+
+Канон: `/Users/sick/Documents/Cursor/MCP browser/PLAYWRIGHT_GLOBAL_AUTH_SCHEME.md`.
+
+## Что считается “правильно”
+
+- **Playwright MCP** — основной браузер.
+- Единый профиль для всех проектов:
+  - `/Users/sick/.cursor/chrome-profile-playwright`
+- Общие storageState:
+  - `/Users/sick/.cursor/storageState_<site>.json`
+

@@ -1,0 +1,57 @@
+[    1305ms] [ERROR] Unrecognized Content-Security-Policy directive 'prefetch-src'. @ https://metrika.yandex.ru/list:0
+[    1316ms] [ERROR] Unrecognized Content-Security-Policy directive 'prefetch-src'. @ chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/content.js:82
+[    1352ms] [ERROR] Unrecognized Content-Security-Policy directive 'prefetch-src'. @ about:blank:0
+[    1353ms] [ERROR] Unrecognized Content-Security-Policy directive 'prefetch-src'. @ about:blank:0
+[    1716ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ chrome-extension://pbanhockgagggenencehbnadejlgchfc/assets/userReportLinkedCandidate.json:0
+[    2148ms] [WARNING] No routes matched location "/list"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    2152ms] [WARNING] No routes matched location "/list"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    2159ms] [ERROR] Unrecognized Content-Security-Policy directive 'prefetch-src'. @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    2159ms] [ERROR] Unrecognized Content-Security-Policy directive 'prefetch-src'. @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    2231ms] Uncaught Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at uo (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1004203)
+    at _l (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1076955)
+    at bu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064525)
+    at yu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064453)
+    at vu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064316)
+    at ru (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1059479)
+    at w (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1200415)
+    at O (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1200947)
+[    2240ms] Uncaught Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at uo (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1004203)
+    at _l (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1076955)
+    at bu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064525)
+    at yu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064453)
+    at vu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064316)
+    at ru (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1059479)
+    at w (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1200415)
+    at O (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1200947)
+[    2241ms] Uncaught Error: Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at _l (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1076641)
+    at bu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064525)
+    at yu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064453)
+    at vu (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1064316)
+    at ou (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1061151)
+    at ru (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1059706)
+    at w (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1200415)
+    at O (https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1:1200947)
+[    2912ms] [ERROR] Unrecognized Content-Security-Policy directive 'prefetch-src'. @ https://metrika.yandex.ru/list?iframe=1&iframe-lang=ru&period=today&group=dekaminute:0
+[    2931ms] [ERROR] Unrecognized Content-Security-Policy directive 'prefetch-src'. @ chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/content.js:82
+[    3177ms] [WARNING] No routes matched location "/list"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    3180ms] [WARNING] No routes matched location "/list"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    3449ms] [WARNING] No routes matched location "/list"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    3451ms] [WARNING] No routes matched location "/list"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    3635ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    3636ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    3733ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ chrome-extension://pbanhockgagggenencehbnadejlgchfc/assets/userReportLinkedCandidate.json:0
+[    5179ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    5183ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    5570ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[    5573ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[   12585ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[   12589ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[   12970ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[   12972ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[   22981ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[   22986ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[   23374ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1
+[   23377ms] [WARNING] No routes matched location "/list?period=today&group=dekaminute"  @ https://yastatic.net/s3/metrika/ui-projects/1.119.2/452.ru.js:1

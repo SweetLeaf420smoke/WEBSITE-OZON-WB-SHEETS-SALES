@@ -1,2 +1,43 @@
 .env
 _io-root
+
+### BEGIN CURSOR_BACKUP_PROTECT ###
+# Backup policy: do not commit secrets or local huge dirs
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+.env.bak
+!.env.example
+!**/.env.example
+
+# keys / certs
+*.pem
+*.key
+*.p12
+*.pfx
+
+# OAuth / GCP / app credentials (exact-ish)
+**/credentials.json
+**/google_credentials.json
+**/.ozon_credentials.json
+**/.ozon_credentials_*.json
+**/.ozon_credentials_meta.json
+**/.open_claw_credentials.json
+**/client_secret_*.apps.googleusercontent.com.json
+
+# local tooling
+.detect-secrets.cfg
+.secrets.baseline
+
+# heavy / reproducible
+**/.venv/**
+**/venv/**
+**/venv_*/**
+**/node_modules/**
+**/__pycache__/**
+**/*.pyc
+.DS_Store
+
+### END CURSOR_BACKUP_PROTECT ###
