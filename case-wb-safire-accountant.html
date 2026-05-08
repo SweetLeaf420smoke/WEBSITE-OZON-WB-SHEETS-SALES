@@ -1,0 +1,96 @@
+---
+footer_contact: "Контакт. По кнопкам выше."
+---
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Кейс: выгрузка документов WB для бухгалтера. Safire, Google Sheets + Apps Script</title>
+  <meta name="description" content="Кейс WB Safire: система в Google Sheets, которая тянет документы и статистику Wildberries и собирает сводный отчёт за период для бухгалтера. Rid, weekly, УПД, уведомление о выкупе, реестр документов.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Кейс: выгрузка документов WB для бухгалтера (Safire)">
+  <meta property="og:description" content="Google Sheets + Apps Script: выбор отчёта WB по rid, выгрузка документов и сборка листа «Сводный отчёт» за период.">
+  <meta property="og:url" content="https://sweetleaf420smoke.github.io/WEBSITE-OZON-WB-SHEETS-SALES/case-wb-safire-accountant.html">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=107283764","ym");ym(107283764,"init",{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});ym(8324542560765500273,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/107283764" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/8324542560765500273" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  {% include ga4.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main>
+    <section class="hero">
+      <h1>Safire (WB): выгрузка документов для бухгалтера</h1>
+      <p class="hero-sub">Кейс. Google-таблица, которая собирает документы Wildberries и строит сводный отчёт за период. Акцент на период и на привязку документов к одному отчёту WB.</p>
+    </section>
+
+    <section class="section" id="task">
+      <h2>Задача</h2>
+      <p>Нужно было сделать понятный экран для бухгалтера. Не десятки файлов и выгрузок, а один лист, где всё привязано к одному периоду.</p>
+      <ul>
+        <li><strong>Один блок</strong>: один период и один отчёт WB.</li>
+        <li><strong>Внутри блока</strong>: строки еженедельного отчёта WB, плюс все связанные документы за тот же период.</li>
+        <li><strong>Главная проблема</strong>: у WB много дат. Нужна понятная привязка, чтобы недели не перемешивались.</li>
+      </ul>
+    </section>
+
+    <section class="section section-alt" id="idea">
+      <h2>Ключевая идея</h2>
+      <p>Якорь всей системы. <strong>RID (realizationreport_id) + период отчёта</strong>. К нему привязываются weekly, документы и статистика.</p>
+      <ul>
+        <li><strong>Период</strong> берётся как период отчёта WB, а не как дата появления файла в API.</li>
+        <li><strong>Документы</strong> (УПД, уведомления о выкупе и другое) по возможности привязываются к тому же rid. Не по creationTime.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="flow">
+      <h2>Как устроено</h2>
+      <ul>
+        <li><strong>Выбор отчёта</strong>: список документов и rid на листе «Выбор_отчётов», отметки галочками.</li>
+        <li><strong>Сборка</strong>: под выбранный rid загружаются данные и собирается итоговый лист.</li>
+        <li><strong>Итоговый экран</strong>: лист <strong>«Сводный отчёт»</strong> для бухгалтера, с русскими заголовками и нормальной типографикой.</li>
+      </ul>
+      <figure class="screenshot">
+        <img src="img/safire-docs-accountant.png" alt="Safire: сводный отчёт для бухгалтера, документы и привязка к периоду">
+        <figcaption>Идея витрины. Бухгалтер открывает один лист и видит отчёт за период, а не набор разрозненных выгрузок.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section section-alt" id="sections">
+      <h2>Что попадает в отчёт за период</h2>
+      <ul>
+        <li><strong>Строки weekly</strong>: дата, код строки, наименование, сумма и НДС.</li>
+        <li><strong>Статистика</strong>: свод из WB Statistics для того же rid.</li>
+        <li><strong>Уведомление о выкупе</strong>: суммы и НДС из документа.</li>
+        <li><strong>УПД</strong>: суммы и НДС, извлечение из zip и xml, если надо.</li>
+      </ul>
+      <p>Структура и оформление сделаны под бухгалтера: русские названия, жир только у заголовков и шапок, остальное обычным текстом.</p>
+    </section>
+
+    <section class="section" id="result">
+      <h2>Результат</h2>
+      <ul>
+        <li><strong>Один экран</strong> вместо ручной сборки документов по неделям.</li>
+        <li><strong>Привязка к периоду</strong> и rid даёт стабильную сверку.</li>
+        <li><strong>Автоматизация</strong> через Apps Script. В таблице меню, обновление и сборка отчёта.</li>
+      </ul>
+    </section>
+
+    <section class="section cta-section">
+      <p><a href="index.html" class="btn btn-hero">На главную</a> <a href="https://t.me/sickselector" class="btn btn-outline" target="_blank" rel="noopener">Написать в Telegram</a> <a href="mailto:bank@ya.ru" class="btn btn-outline">Написать на почту</a></p>
+    </section>
+  </main>
+
+  {% include footer.html %}
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
