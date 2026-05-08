@@ -1,0 +1,19 @@
+---
+description: mandatory execution workflow
+alwaysApply: true
+---
+
+Read PROJECT_STATE.md first.
+
+After any meaningful code change:
+- push
+- deploy
+- run test
+- fetch actual result
+- report
+
+Never stop at code editing only.
+
+If Google Sheets or Apps Script project:
+real output verification is required before done.
+

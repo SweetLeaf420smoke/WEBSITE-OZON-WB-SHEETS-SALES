@@ -1,0 +1,87 @@
+---
+footer_contact: "Контакт. По кнопкам выше."
+---
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Кейс: парсер цен по ссылкам. Google Sheets + Apps Script</title>
+  <meta name="description" content="Кейс: парсер цен по URL в Google Sheets. На листе «Цены» в колонке A ссылки на товары, в колонке B автоматически появляется розничная цена. Apps Script + UrlFetchApp, лог, пакетная обработка и триггер onEdit.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Кейс: парсер цен по ссылкам (Google Sheets + Apps Script)">
+  <meta property="og:description" content="Автоматическая подстановка розничной цены по URL: ссылки в колонке A, цена в колонке B. Пакеты, лог, onEdit, устойчивый парсинг под разные магазины.">
+  <meta property="og:url" content="https://sweetleaf420smoke.github.io/WEBSITE-OZON-WB-SHEETS-SALES/case-ozon-price-scraper.html">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=107283764","ym");ym(107283764,"init",{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});ym(8324542560765500273,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/107283764" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/8324542560765500273" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  {% include ga4.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main>
+    <section class="hero">
+      <h1>Парсер цен по ссылкам. Google Sheets + Apps Script</h1>
+      <p class="hero-sub">Кейс. В таблице ссылки на товары лежат в колонке A, а в колонке B автоматически появляется розничная цена. Работает с разными магазинами, без ручного копипаста.</p>
+    </section>
+
+    <section class="section" id="task">
+      <h2>Задача</h2>
+      <p>Нужна была таблица, где можно быстро обновлять розничные цены по списку URL.</p>
+      <ul>
+        <li><strong>Вход</strong>: лист «Цены», колонка A. Ссылки на карточки товаров в разных интернет магазинах.</li>
+        <li><strong>Выход</strong>: колонка B. Числовая цена, которую можно дальше использовать в расчётах.</li>
+        <li><strong>Важно</strong>: скрипт трогает только A и B, остальные столбцы не ломает.</li>
+      </ul>
+    </section>
+
+    <section class="section section-alt" id="solution">
+      <h2>Что сделано</h2>
+      <ul>
+        <li><strong>Apps Script</strong> с меню «Цены» и пакетной обработкой, чтобы не упираться в лимит времени выполнения.</li>
+        <li><strong>onEdit (опционально)</strong>: если правят колонку A и в B пусто, цена подтягивается автоматически. Большие вставки уходят в пакет, чтобы не зависнуть.</li>
+        <li><strong>Логи</strong>: отдельные листы «Лог» и «Отладка» с ротацией, чтобы история не разрасталась бесконечно.</li>
+        <li><strong>Парсинг цены</strong>: цепочка fallback-методов под реальную вёрстку магазинов (microdata itemprop=price, JSON-LD, специальные случаи).</li>
+      </ul>
+      <figure class="screenshot">
+        <img src="img/price-scraper-sheet.png" alt="Парсер цен: лист «Цены» со списком URL и колонкой с ценой">
+        <figcaption>Пример. Список URL на листе «Цены» и результат в колонке B. Для обновления предусмотрены пункты меню и пакетная обработка.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="flow">
+      <h2>Как это используется</h2>
+      <ul>
+        <li><strong>Обновить все</strong>: пройти строки 2..lastRow и заполнить цены.</li>
+        <li><strong>Только пустые</strong>: обновить только те строки, где есть URL и B пустая.</li>
+        <li><strong>Только выделение</strong>: обновить цену для выделенного диапазона.</li>
+      </ul>
+      <p>При необходимости добавляется условное форматирование, чтобы сразу видеть строки с проблемами парсинга или пустыми ссылками.</p>
+    </section>
+
+    <section class="section section-alt" id="notes">
+      <h2>Ограничения</h2>
+      <ul>
+        <li>Сайты с капчей или тяжёлой защитой могут отдавать заглушку.</li>
+        <li>Если на странице нет числовой цены (например «уточняйте у менеджера»), в таблице будет ошибка или пусто.</li>
+        <li>Для стабильности предусмотрены задержки между запросами, иначе растёт риск 429.</li>
+      </ul>
+    </section>
+
+    <section class="section cta-section">
+      <p><a href="index.html" class="btn btn-hero">На главную</a> <a href="https://t.me/sickselector" class="btn btn-outline" target="_blank" rel="noopener">Написать в Telegram</a> <a href="mailto:bank@ya.ru" class="btn btn-outline">Написать на почту</a></p>
+    </section>
+  </main>
+
+  {% include footer.html %}
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

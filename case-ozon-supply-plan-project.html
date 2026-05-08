@@ -1,0 +1,82 @@
+---
+footer_contact: "Контакт. По кнопкам выше."
+---
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Проект: таблица планирования поставок Ozon. Логистика и кросс док</title>
+  <meta name="description" content="Проект OZON RNP: таблица планирования поставок Ozon. Два сценария: кросс док из Гривно и размещение на 2–4 складах. Тарифы из таблиц Ozon заказчика, расчёт по кластерам, проверки через API.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Проект: таблица планирования поставок Ozon (OZON RNP)">
+  <meta property="og:description" content="Таблица поставок Ozon: тарифы, кластеры, кросс док из Гривно, сценарий 2–4 склада, расчёт потребности и распределение объёма.">
+  <meta property="og:url" content="https://sweetleaf420smoke.github.io/WEBSITE-OZON-WB-SHEETS-SALES/case-ozon-supply-plan-project.html">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=107283764","ym");ym(107283764,"init",{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});ym(8324542560765500273,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/107283764" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/8324542560765500273" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  {% include ga4.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main>
+    <section class="hero">
+      <h1>Таблица планирования поставок Ozon. Проект из OZON RNP</h1>
+      <p class="hero-sub">Проект из папки OZON RNP. Google Sheets + Apps Script: расчёт по кластерам, тарифы из таблиц Ozon заказчика, два сценария отгрузки и проверки через API.</p>
+    </section>
+
+    <section class="section" id="what">
+      <h2>Что решает проект</h2>
+      <ul>
+        <li><strong>Сценарий A</strong>: кросс док из Гривно по направлениям (стоимость отгрузки и перевозки, срок доставки).</li>
+        <li><strong>Сценарий B</strong>: размещение на 2–4 складах и доставка до покупателя по кластерам.</li>
+        <li><strong>Распределение объёма</strong>: весь объём поставки распределяется по кластерам с учётом спроса, остатков и срока до следующей отгрузки.</li>
+      </ul>
+    </section>
+
+    <section class="section section-alt" id="data">
+      <h2>Какие данные используются</h2>
+      <p>Проект опирается на таблицы заказчика и их структуру.</p>
+      <ul>
+        <li><strong>Лист «Логистика РФ»</strong>: тарифы до покупателя по объёму, кластеру поставки и кластеру доставки.</li>
+        <li><strong>Лист кросс докинга</strong>: маршруты из «Москва и МО, Гривно РФЦ» в кластеры/склады, с тарифами руб/л и сроком.</li>
+        <li><strong>Входные данные</strong>: литраж, объём, продажи по кластерам, остатки, цена товара и срок в днях.</li>
+      </ul>
+      <figure class="screenshot">
+        <img src="img/ozon-supply-plan-rnp.png" alt="OZON RNP: пример разбора таблиц и структуры проекта поставок">
+        <figcaption>Скрин из проекта OZON RNP. Это не витрина, а рабочая база для построения расчётов и проверки логики.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="checks">
+      <h2>Проверки и надёжность</h2>
+      <ul>
+        <li><strong>Проверка формул и итогов</strong> через API: сумма распределения равна общему объёму, сроки и стоимости считаются как ожидается.</li>
+        <li><strong>Диагностика</strong>: команды чтения диапазона и вывода формул, чтобы быстро ловить расхождения.</li>
+        <li><strong>Деплой</strong>: код можно обновлять в контейнерном Apps Script проекта таблицы.</li>
+      </ul>
+    </section>
+
+    <section class="section section-alt" id="result">
+      <h2>Результат</h2>
+      <p>На выходе получается понятный план. Куда и сколько везти, и какой сценарий выгоднее по сумме и по кластерам.</p>
+      <p>Если нужен маркетинговый кейс с витринным описанием, он уже есть отдельно: <a href="case-ozon-postavki.html">кейс Ozon</a>.</p>
+    </section>
+
+    <section class="section cta-section">
+      <p><a href="index.html" class="btn btn-hero">На главную</a> <a href="https://t.me/sickselector" class="btn btn-outline" target="_blank" rel="noopener">Написать в Telegram</a> <a href="mailto:bank@ya.ru" class="btn btn-outline">Написать на почту</a></p>
+    </section>
+  </main>
+
+  {% include footer.html %}
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
